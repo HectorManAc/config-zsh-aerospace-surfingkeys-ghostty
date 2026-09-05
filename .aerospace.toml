@@ -4,7 +4,6 @@
 # Config version for compatibility and deprecations
 config-version = 2
 
-# This config option is only available since 'config-version = 2'
 # Especifica los espacios de trabajo que nunca deben cerrarse
 persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7']
 
@@ -20,17 +19,19 @@ on-window-detected = [
   { if.app-name-regex-substring = 'bitwarden', run = 'layout floating' }
 ]
 
-# Available commands: https://nikitabobko.github.io/AeroSpace/commands
 after-login-command = []
 
+# Aquí modificamos JankyBorders: 
+# active_color = 0xff00ffff (Neón Cian brillante. Los primeros 'ff' son opacidad 100%)
+# inactive_color = 0x00000000 (Completamente transparente. Los primeros '00' son opacidad 0%)
 after-startup-command = [
-  'exec-and-forget borders active_color=0xff00ffdd inactive_color=0xff737373 width=3.0'
+  'exec-and-forget borders active_color=0xff00ffff inactive_color=0x00000000 width=4.0'
 ]
 
 # Start AeroSpace at login
 start-at-login = true 
 
-# Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
+# Normalizations.
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
@@ -41,8 +42,7 @@ default-root-container-orientation = 'auto'
 
 # Mouse follows focus
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-on-focus-changed = ['move-mouse window-force-center']
-
+on-focus-changed = ['move-mouse window-lazy-center']
 # Turn off macOS "Hide application" (cmd-h) feature
 automatically-unhide-macos-hidden-apps = true 
 
@@ -53,10 +53,10 @@ exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_w
 [key-mapping]
 preset = 'qwerty'
 
-# Gaps between windows (inner-*) and between monitor edges (outer-*).
+# Espacios eliminados (todos en 0)
 [gaps]
-inner.horizontal = 8
-inner.vertical = 8
+inner.horizontal = 0
+inner.vertical = 0
 outer.bottom = 0
 outer.top = 0
 outer.right = 0
@@ -134,10 +134,10 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # force certain workspaces to certain monitors
 [workspace-to-monitor-force-assignment]
-1 = 'main'                         # Monitor sequence number from left to right. 1-based indexing
-2 = 'main'                       # Main monitor
-3 = 'main'                  # Non-main monitor in case when there are only two monitors
-4 = 'main'                  # Non-main monitor in case when there are only two monitors
+1 = 'main'
+2 = 'main'
+3 = 'main'
+4 = 'main'
 5 = 'main'
 6 = 'secondary'
 7 = 'secondary'
