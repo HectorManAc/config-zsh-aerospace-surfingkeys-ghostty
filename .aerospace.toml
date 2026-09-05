@@ -23,9 +23,9 @@ after-login-command = []
 
 # Aquí modificamos JankyBorders:
 # active_color = 0xff00ffff (Neón Cian brillante. Los primeros 'ff' son opacidad 100%)
-# inactive_color = 0x00000000 (Completamente transparente. Los primeros '00' son opacidad 0%)
+# inactive_color = 0xffff0000 (Rojo sólido. Los primeros 'ff' son opacidad 100%)
 after-startup-command = [
-  'exec-and-forget /bin/bash ~/.config/launch_borders.sh'
+  'exec-and-forget /opt/homebrew/bin/borders active_color=0xff00ffff inactive_color=0xffff0000 width=10.0'
 ]
 # Start AeroSpace at login
 start-at-login = true
@@ -51,14 +51,14 @@ exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_w
 [key-mapping]
 preset = 'qwerty'
 
-# Espacios eliminados (todos en 0)
+# Espacios agregados entre apps
 [gaps]
-inner.horizontal = 0
-inner.vertical = 0
-outer.bottom = 0
-outer.top = 0
-outer.right = 0
-outer.left = 0
+inner.horizontal = 8
+inner.vertical = 8
+outer.bottom = 8
+outer.top = 8
+outer.right = 8
+outer.left = 8
 
 # 'main' binding mode declaration
 [mode.main.binding]
