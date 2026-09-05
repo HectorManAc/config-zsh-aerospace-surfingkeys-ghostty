@@ -1,4 +1,4 @@
-# 💻 Configuración de mi Entorno macOS (config-zsh-aerospace-surfingkeys)
+# 💻 Configuración de mi Entorno macOS (config-zsh-aerospace-surfingkeys-ghostty)
 
 Este repositorio contiene mis archivos de configuración de macOS (dotfiles), abarcando herramientas de terminal, gestión de ventanas y navegación productiva:
 
@@ -7,7 +7,7 @@ Este repositorio contiene mis archivos de configuración de macOS (dotfiles), ab
 *   **🐚 Zsh (\`.zshrc\`)**: Prompt personalizado en colores neón con fecha/hora compactas y ruta absoluta, autocompletado y resaltado de sintaxis.
 *   **🪟 AeroSpace (\`.aerospace.toml\`)**: Configuración completa de atajos de teclado y reglas de workspaces para el gestor de ventanas tiling en macOS.
 *   **🌐 Surfingkeys (\`surfingkeys.js\`)**: Atajos estilo Vim y personalizaciones para navegación ágil en Google Chrome / Firefox.
-*   **🛠️ Ghostty**: Preparado para integrar configuraciones de este moderno emulador de terminal.
+*   **🛠️ Ghostty**: Configuración personalizada de este moderno emulador de terminal.
 
 ---
 
@@ -16,7 +16,7 @@ Este repositorio contiene mis archivos de configuración de macOS (dotfiles), ab
 Para descargar y aplicar todas estas configuraciones en una computadora limpia con un solo comando, ejecuta:
 
 \`\`\`bash
-git clone https://github.com/HectorManAc/config-zsh-aerospace-surfingkeys.git ~/dotfiles && ~/dotfiles/install.sh
+git clone https://github.com/HectorManAc/config-zsh-aerospace-surfingkeys-ghostty.git ~/dotfiles && ~/dotfiles/install.sh
 \`\`\`
 
 ---
