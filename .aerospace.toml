@@ -6,6 +6,7 @@ config-version = 2
 
 # Especifica los espacios de trabajo que nunca deben cerrarse
 persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
 # Window Rules consolidadas
 on-window-detected = [
   { if.app-id = 'com.google.Chrome', run = 'move-node-to-workspace 1' },
@@ -20,15 +21,14 @@ on-window-detected = [
 
 after-login-command = []
 
-# Aquí modificamos JankyBorders: 
+# Aquí modificamos JankyBorders:
 # active_color = 0xff00ffff (Neón Cian brillante. Los primeros 'ff' son opacidad 100%)
 # inactive_color = 0x00000000 (Completamente transparente. Los primeros '00' son opacidad 0%)
 after-startup-command = [
-  'exec-and-forget borders active_color=0xff00ffff inactive_color=0x00000000 width=4.0'
+  'exec-and-forget /bin/bash ~/.config/launch_borders.sh'
 ]
-
 # Start AeroSpace at login
-start-at-login = true 
+start-at-login = true
 
 # Normalizations.
 enable-normalization-flatten-containers = true
@@ -42,7 +42,7 @@ default-root-container-orientation = 'auto'
 # Mouse follows focus
 on-focus-changed = ['move-mouse window-lazy-center']
 # Turn off macOS "Hide application" (cmd-h) feature
-automatically-unhide-macos-hidden-apps = true 
+automatically-unhide-macos-hidden-apps = true
 
 # Notify Sketchybar about workspace change and update icons
 exec-on-workspace-change = ['/bin/bash', '-c', 'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE && ~/.config/sketchybar/plugins/update_workspace_icons.sh']
@@ -103,6 +103,7 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 0'
+
 # Move node to workspace
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -114,6 +115,7 @@ alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-0 = 'move-node-to-workspace 0'
+
 # Workspace back and forth
 alt-tab = 'workspace-back-and-forth'
 # Move workspace to monitor
@@ -141,8 +143,8 @@ alt-shift-l = ['join-with right', 'mode main']
 3 = 'main'
 4 = 'main'
 5 = 'main'
-6 = 'main' # o 'secondary' según prefieras
-7 = 'main' # o 'secondary' según prefieras
+6 = 'main'
+7 = 'main'
 8 = 'built-in'
 9 = 'built-in'
 0 = 'built-in'
