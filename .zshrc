@@ -18,6 +18,10 @@ alias a="agy"
 alias ll="ls -lahF"
 alias grep="grep --color=auto"
 
+# Dotfiles management
+alias dotfiles-reload="source ~/.zshrc && echo '✅ Configuraciones recargadas'"
+alias dotfiles-update="cd ~/dotfiles && git pull && ./install.sh && source ~/.zshrc"
+
 # ==========================================
 # HISTORY SETTINGS
 # ==========================================

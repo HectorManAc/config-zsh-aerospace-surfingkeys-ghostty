@@ -13,11 +13,21 @@ Este repositorio contiene mis archivos de configuración de macOS (dotfiles), ab
 
 ## 🚀 Instalación Rápida (En una Mac Nueva)
 
-Para descargar y aplicar todas estas configuraciones en una computadora limpia con un solo comando, ejecuta:
+Para descargar y aplicar todas estas configuraciones en una computadora limpia, ejecuta un solo comando en tu terminal:
 
-\`\`\`bash
+```bash
 git clone https://github.com/HectorManAc/config-zsh-aerospace-surfingkeys-ghostty.git ~/dotfiles && ~/dotfiles/install.sh
-\`\`\`
+```
+
+**¿Qué hace este script (`install.sh`)?**
+1. Crea las carpetas necesarias (por ejemplo, `~/.config/ghostty`).
+2. Genera enlaces simbólicos (`symlinks`) desde la carpeta `~/dotfiles` hacia las rutas oficiales en tu Mac. Así, cuando modifiques un archivo desde tu sistema, se estará modificando directamente en la carpeta de este repositorio.
+
+### Atajos Útiles (Aliases)
+
+He incluido atajos en tu `.zshrc` para gestionar fácilmente estos archivos en el futuro:
+- `dotfiles-reload`: Recarga la configuración actual de Zsh sin cerrar la terminal.
+- `dotfiles-update`: Descarga la última versión de tu repositorio, ejecuta el instalador y recarga Zsh.
 
 ---
 
