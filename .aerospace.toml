@@ -25,7 +25,7 @@ after-login-command = []
 # active_color = 0xff00ffff (Neón Cian brillante. Los primeros 'ff' son opacidad 100%)
 # inactive_color = 0xffff0000 (Rojo sólido. Los primeros 'ff' son opacidad 100%)
 after-startup-command = [
-  'exec-and-forget /opt/homebrew/bin/borders active_color=0xff00ffff inactive_color=0xffff0000 width=10.0'
+  'exec-and-forget /opt/homebrew/bin/borders active_color=0xff00ffff inactive_color=0xffff0000 width=8.0'
 ]
 # Start AeroSpace at login
 start-at-login = true
@@ -143,8 +143,8 @@ alt-shift-l = ['join-with right', 'mode main']
 3 = 'main'
 4 = 'main'
 5 = 'main'
-6 = 'main'
-7 = 'main'
+6 = 'built-in'
+7 = 'built-in'
 8 = 'built-in'
 9 = 'built-in'
 0 = 'built-in'
